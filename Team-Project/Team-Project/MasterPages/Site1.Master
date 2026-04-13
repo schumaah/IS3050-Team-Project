@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Team_Project.MasterPages.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+	<title>IS3050 Team Project</title>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+	<div class="wrapper">
+		<div class="head">
+
+		    IS3050 Project</div>
+		<div class="main">
+
+		    <asp:ContentPlaceHolder ID="main" runat="server">
+            </asp:ContentPlaceHolder>
+
+		</div>
+		<div class="nav">
+
+		    (ADD NAV HERE)</div>
+		<div class="footer">
+
+		    Footer Stuff</div>
+	</div>
+    </form>
+</body>
+</html>
