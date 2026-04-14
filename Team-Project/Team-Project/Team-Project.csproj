@@ -72,6 +72,7 @@
       <DependentUpon>movies.mdf</DependentUpon>
     </Content>
     <Content Include="Pages\WebForm2.aspx" />
+    <Content Include="Pages\WebForm3.aspx" />
     <Content Include="Styles\StyleSheet1.css" />
     <Content Include="default.aspx" />
     <Content Include="Pages\WebForm1.aspx" />
@@ -105,6 +106,13 @@
     </Compile>
     <Compile Include="Pages\WebForm2.aspx.designer.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
