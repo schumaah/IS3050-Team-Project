@@ -67,7 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="movies.mdf" />
+    <Content Include="App_Data\movies.mdf" />
+    <Content Include="App_Data\movies_log.ldf">
+      <DependentUpon>movies.mdf</DependentUpon>
+    </Content>
     <Content Include="Styles\StyleSheet1.css" />
     <Content Include="default.aspx" />
     <Content Include="Pages\WebForm1.aspx" />
@@ -106,6 +109,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

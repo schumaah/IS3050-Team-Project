@@ -4,29 +4,32 @@
 
 <html>
 <head runat="server">
-	<title>IS3050 Team Project</title>
-	<asp:ContentPlaceHolder ID="head" runat="server">
-	</asp:ContentPlaceHolder>
+    <title>IS3050 Team Project</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="../Styles/StyleSheet1.css" />
 </head>
 <body>
-	<form id="form1" runat="server">
-	<div class="wrapper">
-		<div class="head">
+    <form id="form1" runat="server">
+        <div class="head">
+            IS3050 Project
+        </div>
+        <div class="wrapper">
+            <div class="nav">
+                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                </asp:TreeView>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            </div>
+            <div class="main">
 
-		    IS3050 Project</div>
-		<div class="main">
+                <asp:ContentPlaceHolder ID="main" runat="server">
+                </asp:ContentPlaceHolder>
 
-		    <asp:ContentPlaceHolder ID="main" runat="server">
-            </asp:ContentPlaceHolder>
-
-		</div>
-		<div class="nav">
-
-		    (ADD NAV HERE)</div>
-		<div class="footer">
-
-		    Footer Stuff</div>
-	</div>
+            </div>
+        </div>
+        <div class="footer">
+            Footer Stuff
+        </div>
     </form>
 </body>
 </html>

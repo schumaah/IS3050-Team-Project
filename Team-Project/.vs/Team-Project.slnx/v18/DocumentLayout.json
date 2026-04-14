@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|c:\\users\\adams\\documents\\github\\is3050 team project\\team-project\\team-project\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\AdamS\\Documents\\GitHub\\IS3050 Team Project\\Team-Project\\team-project\\masterpages\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\masterpages\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|c:\\users\\adams\\documents\\github\\is3050 team project\\team-project\\team-project\\styles\\stylesheet1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\AdamS\\Documents\\GitHub\\IS3050 Team Project\\Team-Project\\team-project\\styles\\stylesheet1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\styles\\stylesheet1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|c:\\users\\adams\\documents\\github\\is3050 team project\\team-project\\team-project\\masterpages\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\masterpages\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|c:\\users\\adams\\documents\\github\\is3050 team project\\team-project\\team-project\\web.sitemap||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\web.sitemap||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\AdamS\\Documents\\GitHub\\IS3050 Team Project\\Team-Project\\team-project\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f53-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Web.sitemap",
+              "DocumentMoniker": "C:\\Users\\AdamS\\Documents\\GitHub\\IS3050 Team Project\\Team-Project\\Team-Project\\Web.sitemap",
+              "RelativeDocumentMoniker": "Team-Project\\Web.sitemap",
+              "ToolTip": "C:\\Users\\AdamS\\Documents\\GitHub\\IS3050 Team Project\\Team-Project\\Team-Project\\Web.sitemap",
+              "RelativeToolTip": "Team-Project\\Web.sitemap",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002838|",
+              "WhenOpened": "2026-04-14T15:26:09.843Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -40,14 +57,14 @@
               "RelativeDocumentMoniker": "Team-Project\\Styles\\StyleSheet1.css",
               "ToolTip": "C:\\Users\\AdamS\\Documents\\GitHub\\IS3050 Team Project\\Team-Project\\Team-Project\\Styles\\StyleSheet1.css",
               "RelativeToolTip": "Team-Project\\Styles\\StyleSheet1.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-04-13T21:09:54.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "default.aspx",
               "DocumentMoniker": "C:\\Users\\AdamS\\Documents\\GitHub\\IS3050 Team Project\\Team-Project\\Team-Project\\default.aspx",
               "RelativeDocumentMoniker": "Team-Project\\default.aspx",
@@ -73,13 +90,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Site1.Master",
               "DocumentMoniker": "C:\\Users\\AdamS\\Documents\\GitHub\\IS3050 Team Project\\Team-Project\\Team-Project\\MasterPages\\Site1.Master",
               "RelativeDocumentMoniker": "Team-Project\\MasterPages\\Site1.Master",
               "ToolTip": "C:\\Users\\AdamS\\Documents\\GitHub\\IS3050 Team Project\\Team-Project\\Team-Project\\MasterPages\\Site1.Master",
               "RelativeToolTip": "Team-Project\\MasterPages\\Site1.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-04-13T21:01:54.161Z",
               "EditorCaption": ""
