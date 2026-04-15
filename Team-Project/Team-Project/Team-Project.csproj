@@ -71,11 +71,12 @@
     <Content Include="App_Data\movies_log.ldf">
       <DependentUpon>movies.mdf</DependentUpon>
     </Content>
-    <Content Include="Pages\WebForm2.aspx" />
-    <Content Include="Pages\WebForm3.aspx" />
+    <Content Include="Pages\Customers.aspx" />
+    <Content Include="Pages\Lookup.aspx" />
+    <Content Include="Pages\Genres.aspx" />
     <Content Include="Styles\StyleSheet1.css" />
     <Content Include="default.aspx" />
-    <Content Include="Pages\WebForm1.aspx" />
+    <Content Include="Pages\Movies.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -93,26 +94,33 @@
     <Compile Include="MasterPages\Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Pages\Movies.aspx.cs">
+      <DependentUpon>Movies.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Pages\Movies.aspx.designer.cs">
+      <DependentUpon>Movies.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="Pages\Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="Pages\Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\WebForm3.aspx.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
+    <Compile Include="Pages\Lookup.aspx.cs">
+      <DependentUpon>Lookup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\WebForm3.aspx.designer.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
+    <Compile Include="Pages\Lookup.aspx.designer.cs">
+      <DependentUpon>Lookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Genres.aspx.cs">
+      <DependentUpon>Genres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Genres.aspx.designer.cs">
+      <DependentUpon>Genres.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site1.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="Team_Project._default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site1.Master" AutoEventWireup="true" CodeBehind="Movies.aspx.cs" Inherits="Team_Project._default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-    Adjustments<br />
-&nbsp;<asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MOV_code" DataSourceID="SqlDataSource1">
+    <h1>Movies</h1>
+    <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MOV_code" DataSourceID="SqlDataSource1">
     <EditItemTemplate>
         MOV_code:
         <asp:Label ID="MOV_codeLabel1" runat="server" Text='<%# Eval("MOV_code") %>' />

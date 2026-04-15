@@ -1,51 +1,66 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site1.Master" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="Team_Project.Pages.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site1.Master" AutoEventWireup="true" CodeBehind="Customers.aspx.cs" Inherits="Team_Project.Pages.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
+    <h1>Customers</h1>
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="CUST_ssn" DataSourceID="SqlDataSource1" AllowPaging="True">
     <EditItemTemplate>
-        CUST_ssn:
+        SSN:
         <asp:Label ID="CUST_ssnLabel1" runat="server" Text='<%# Eval("CUST_ssn") %>' />
         <br />
-        CUST_name:
+        Name:
         <asp:TextBox ID="CUST_nameTextBox" runat="server" Text='<%# Bind("CUST_name") %>' />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="CUST_nameTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="CUST_nameTextBox" Display="Dynamic" ErrorMessage="Must be text" ValidationExpression="^[A-Za-z]+([ '-][A-Za-z]+)*$"></asp:RegularExpressionValidator>
         <br />
-        CUST_dob:
+        Date of Birth:
         <asp:TextBox ID="CUST_dobTextBox" runat="server" Text='<%# Bind("CUST_dob") %>' />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="CUST_dobTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="CUST_dobTextBox" Display="Dynamic" ErrorMessage="Must Be Date" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/(19|20)\d{2}$"></asp:RegularExpressionValidator>
         <br />
-        CUST_memberdate:
+        Member Date:
         <asp:TextBox ID="CUST_memberdateTextBox" runat="server" Text='<%# Bind("CUST_memberdate") %>' />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="CUST_memberdateTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="CUST_memberdateTextBox" Display="Dynamic" ErrorMessage="Must Be Date" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/(19|20)\d{2}$"></asp:RegularExpressionValidator>
         <br />
         <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
         &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
     </EditItemTemplate>
     <InsertItemTemplate>
-        CUST_ssn:
+        SSN:
         <asp:TextBox ID="CUST_ssnTextBox" runat="server" Text='<%# Bind("CUST_ssn") %>' />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CUST_ssnTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="CUST_ssnTextBox" ErrorMessage="Must be SSN" ValidationExpression="\d{3}-\d{2}-\d{4}"></asp:RegularExpressionValidator>
         <br />
-        CUST_name:
+        Name:
         <asp:TextBox ID="CUST_nameTextBox" runat="server" Text='<%# Bind("CUST_name") %>' />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="CUST_nameTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="CUST_nameTextBox" Display="Dynamic" ErrorMessage="Must be Name" ValidationExpression="^[A-Za-z]+([ '-][A-Za-z]+)*$"></asp:RegularExpressionValidator>
         <br />
-        CUST_dob:
+        Date of Birth:
         <asp:TextBox ID="CUST_dobTextBox" runat="server" Text='<%# Bind("CUST_dob") %>' />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="CUST_dobTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="CUST_dobTextBox" Display="Dynamic" ErrorMessage="Must Be Date" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/(19|20)\d{2}$"></asp:RegularExpressionValidator>
         <br />
-        CUST_memberdate:
+        Member Date:
         <asp:TextBox ID="CUST_memberdateTextBox" runat="server" Text='<%# Bind("CUST_memberdate") %>' />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="CUST_memberdateTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="CUST_memberdateTextBox" Display="Dynamic" ErrorMessage="Must Be Date" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/(19|20)\d{2}$"></asp:RegularExpressionValidator>
         <br />
         <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
         &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
     </InsertItemTemplate>
     <ItemTemplate>
-        CUST_ssn:
+        SSN:
         <asp:Label ID="CUST_ssnLabel" runat="server" Text='<%# Eval("CUST_ssn") %>' />
         <br />
-        CUST_name:
+        Name:
         <asp:Label ID="CUST_nameLabel" runat="server" Text='<%# Bind("CUST_name") %>' />
         <br />
-        CUST_dob:
+        Date of Birth:
         <asp:Label ID="CUST_dobLabel" runat="server" Text='<%# Bind("CUST_dob") %>' />
         <br />
-        CUST_memberdate:
+        Member Date:
         <asp:Label ID="CUST_memberdateLabel" runat="server" Text='<%# Bind("CUST_memberdate") %>' />
         <br />
         <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
