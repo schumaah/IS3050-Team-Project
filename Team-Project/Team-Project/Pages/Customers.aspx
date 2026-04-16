@@ -12,6 +12,7 @@
         <asp:TextBox ID="CUST_nameTextBox" runat="server" Text='<%# Bind("CUST_name") %>' />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="CUST_nameTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="CUST_nameTextBox" Display="Dynamic" ErrorMessage="Must be text" ValidationExpression="^[A-Za-z]+([ '-][A-Za-z]+)*$"></asp:RegularExpressionValidator>
+        <asp:RequiredFieldValidator ID="NameNotNull" runat="server" ControlToValidate="CUST_nameTextBox" ErrorMessage="*Enter a Name"></asp:RequiredFieldValidator>
         <br />
         Date of Birth:
         <asp:TextBox ID="CUST_dobTextBox" runat="server" Text='<%# Bind("CUST_dob") %>' />

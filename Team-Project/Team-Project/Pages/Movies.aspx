@@ -10,15 +10,19 @@
         <br />
         MOV_title:
         <asp:TextBox ID="MOV_titleTextBox" runat="server" Text='<%# Bind("MOV_title") %>' />
+        <asp:RequiredFieldValidator ID="MovietitleNotNull" runat="server" ControlToValidate="MOV_titleTextBox" ErrorMessage="*Enter a Title"></asp:RequiredFieldValidator>
         <br />
         MOV_releasedate:
         <asp:TextBox ID="MOV_releasedateTextBox" runat="server" Text='<%# Bind("MOV_releasedate") %>' />
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="MOV_releasedateTextBox" ErrorMessage="*Enter date in MM/DD/YYYY format" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$"></asp:RegularExpressionValidator>
         <br />
         MOV_duration:
         <asp:TextBox ID="MOV_durationTextBox" runat="server" Text='<%# Bind("MOV_duration") %>' />
         <br />
         MOV_price:
         <asp:TextBox ID="MOV_priceTextBox" runat="server" Text='<%# Bind("MOV_price") %>' />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="MOV_priceTextBox" ErrorMessage="*Enter a Price"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="PriceNotNull" runat="server" ControlToValidate="MOV_priceTextBox" ErrorMessage="*Enter a valid Price: XX.XX" ValidationExpression="^\d+\.\d{2}$"></asp:RegularExpressionValidator>
         <br />
         MOV_genre:
         <asp:TextBox ID="MOV_genreTextBox" runat="server" Text='<%# Bind("MOV_genre") %>' />
@@ -29,18 +33,23 @@
     <InsertItemTemplate>
         MOV_code:
         <asp:TextBox ID="MOV_codeTextBox" runat="server" Text='<%# Bind("MOV_code") %>' />
+        <asp:RequiredFieldValidator ID="MovieCodeNotNull" runat="server" ControlToValidate="MOV_codeTextBox" ErrorMessage="*Enter a Movie Code"></asp:RequiredFieldValidator>
         <br />
         MOV_title:
         <asp:TextBox ID="MOV_titleTextBox" runat="server" Text='<%# Bind("MOV_title") %>' />
+        <asp:RequiredFieldValidator ID="TitleNotNull" runat="server" ControlToValidate="MOV_titleTextBox" ErrorMessage="*Enter a Movie Title"></asp:RequiredFieldValidator>
         <br />
         MOV_releasedate:
         <asp:TextBox ID="MOV_releasedateTextBox" runat="server" Text='<%# Bind("MOV_releasedate") %>' />
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="MOV_releasedateTextBox" ErrorMessage="*Enter date in MM/DD/YYYY format" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$"></asp:RegularExpressionValidator>
         <br />
         MOV_duration:
         <asp:TextBox ID="MOV_durationTextBox" runat="server" Text='<%# Bind("MOV_duration") %>' />
         <br />
         MOV_price:
         <asp:TextBox ID="MOV_priceTextBox" runat="server" Text='<%# Bind("MOV_price") %>' />
+        <asp:RequiredFieldValidator ID="PriceNotNull" runat="server" ControlToValidate="MOV_priceTextBox" ErrorMessage="*Enter a Price"></asp:RequiredFieldValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="MOV_priceTextBox" ErrorMessage="*Enter a Valid Price: XX.XX" ValidationExpression="^\d+\.\d{2}$"></asp:RegularExpressionValidator>
         <br />
         MOV_genre:
         <asp:TextBox ID="MOV_genreTextBox" runat="server" Text='<%# Bind("MOV_genre") %>' />
