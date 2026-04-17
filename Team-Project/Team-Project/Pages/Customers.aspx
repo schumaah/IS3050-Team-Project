@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site1.Master" AutoEventWireup="true" CodeBehind="Customers.aspx.cs" Inherits="Team_Project.Pages.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site1.Master" AutoEventWireup="true" CodeBehind="Customers.aspx.cs" Inherits="Team_Project.Pages.Customers" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
@@ -17,12 +17,12 @@
         Date of Birth:
         <asp:TextBox ID="CUST_dobTextBox" runat="server" Text='<%# Bind("CUST_dob") %>' />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="CUST_dobTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="CUST_dobTextBox" Display="Dynamic" ErrorMessage="Must Be Date" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/(19|20)\d{2}$"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="CUST_dobTextBox" Display="Dynamic" ErrorMessage="*Enter date in MM/DD/YYYY format" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$"></asp:RegularExpressionValidator>
         <br />
         Member Date:
         <asp:TextBox ID="CUST_memberdateTextBox" runat="server" Text='<%# Bind("CUST_memberdate") %>' />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="CUST_memberdateTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="CUST_memberdateTextBox" Display="Dynamic" ErrorMessage="Must Be Date" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/(19|20)\d{2}$"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="CUST_memberdateTextBox" Display="Dynamic" ErrorMessage="*Enter date in MM/DD/YYYY format" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$"></asp:RegularExpressionValidator>
         <br />
         <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
         &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
@@ -32,6 +32,7 @@
         <asp:TextBox ID="CUST_ssnTextBox" runat="server" Text='<%# Bind("CUST_ssn") %>' />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CUST_ssnTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="CUST_ssnTextBox" ErrorMessage="Must be SSN" ValidationExpression="\d{3}-\d{2}-\d{4}"></asp:RegularExpressionValidator>
+        <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="CUST_ssnTextBox" ErrorMessage="Must be Unique SSN" ClientValidationFunction="ValidateUniqueSSN"></asp:CustomValidator>
         <br />
         Name:
         <asp:TextBox ID="CUST_nameTextBox" runat="server" Text='<%# Bind("CUST_name") %>' />
@@ -41,12 +42,12 @@
         Date of Birth:
         <asp:TextBox ID="CUST_dobTextBox" runat="server" Text='<%# Bind("CUST_dob") %>' />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="CUST_dobTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="CUST_dobTextBox" Display="Dynamic" ErrorMessage="Must Be Date" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/(19|20)\d{2}$"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="CUST_dobTextBox" Display="Dynamic" ErrorMessage="*Enter date in MM/DD/YYYY format" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$"></asp:RegularExpressionValidator>
         <br />
         Member Date:
         <asp:TextBox ID="CUST_memberdateTextBox" runat="server" Text='<%# Bind("CUST_memberdate") %>' />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="CUST_memberdateTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="CUST_memberdateTextBox" Display="Dynamic" ErrorMessage="Must Be Date" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12]\d|3[01])\/(19|20)\d{2}$"></asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="CUST_memberdateTextBox" Display="Dynamic" ErrorMessage="*Enter date in MM/DD/YYYY format" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$"></asp:RegularExpressionValidator>
         <br />
         <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
         &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />

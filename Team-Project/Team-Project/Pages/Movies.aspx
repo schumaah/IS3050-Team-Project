@@ -1,79 +1,86 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site1.Master" AutoEventWireup="true" CodeBehind="Movies.aspx.cs" Inherits="Team_Project._default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site1.Master" AutoEventWireup="true" CodeBehind="Movies.aspx.cs" Inherits="Team_Project.Pages.Movies" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <h1>Movies</h1>
-    <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MOV_code" DataSourceID="SqlDataSource1">
+    <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MOV_code" DataSourceID="SqlDataSource1" Width="507px">
     <EditItemTemplate>
-        MOV_code:
+        Code:
         <asp:Label ID="MOV_codeLabel1" runat="server" Text='<%# Eval("MOV_code") %>' />
         <br />
-        MOV_title:
+        Title:
         <asp:TextBox ID="MOV_titleTextBox" runat="server" Text='<%# Bind("MOV_title") %>' />
         <asp:RequiredFieldValidator ID="MovietitleNotNull" runat="server" ControlToValidate="MOV_titleTextBox" ErrorMessage="*Enter a Title"></asp:RequiredFieldValidator>
         <br />
-        MOV_releasedate:
+        Release Date:
         <asp:TextBox ID="MOV_releasedateTextBox" runat="server" Text='<%# Bind("MOV_releasedate") %>' />
         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="MOV_releasedateTextBox" ErrorMessage="*Enter date in MM/DD/YYYY format" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$"></asp:RegularExpressionValidator>
         <br />
-        MOV_duration:
+        Duration:
         <asp:TextBox ID="MOV_durationTextBox" runat="server" Text='<%# Bind("MOV_duration") %>' />
         <br />
-        MOV_price:
+        Price:
         <asp:TextBox ID="MOV_priceTextBox" runat="server" Text='<%# Bind("MOV_price") %>' />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="MOV_priceTextBox" ErrorMessage="*Enter a Price"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="PriceNotNull" runat="server" ControlToValidate="MOV_priceTextBox" ErrorMessage="*Enter a valid Price: XX.XX" ValidationExpression="^\d+\.\d{2}$"></asp:RegularExpressionValidator>
         <br />
-        MOV_genre:
+        Genre:
         <asp:TextBox ID="MOV_genreTextBox" runat="server" Text='<%# Bind("MOV_genre") %>' />
         <br />
         <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
         &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
     </EditItemTemplate>
     <InsertItemTemplate>
-        MOV_code:
+        Code:
         <asp:TextBox ID="MOV_codeTextBox" runat="server" Text='<%# Bind("MOV_code") %>' />
         <asp:RequiredFieldValidator ID="MovieCodeNotNull" runat="server" ControlToValidate="MOV_codeTextBox" ErrorMessage="*Enter a Movie Code"></asp:RequiredFieldValidator>
+        <asp:CustomValidator
+            ID="CustomValidator1"
+            runat="server"
+            ControlToValidate="MOV_codeTextBox"
+            OnServerValidate="ValidateUniqueID"
+            ErrorMessage="*Enter a unique ID"
+            Display="Dynamic"></asp:CustomValidator>
         <br />
-        MOV_title:
+        Title:
         <asp:TextBox ID="MOV_titleTextBox" runat="server" Text='<%# Bind("MOV_title") %>' />
         <asp:RequiredFieldValidator ID="TitleNotNull" runat="server" ControlToValidate="MOV_titleTextBox" ErrorMessage="*Enter a Movie Title"></asp:RequiredFieldValidator>
         <br />
-        MOV_releasedate:
+        Releasedate:
         <asp:TextBox ID="MOV_releasedateTextBox" runat="server" Text='<%# Bind("MOV_releasedate") %>' />
         <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="MOV_releasedateTextBox" ErrorMessage="*Enter date in MM/DD/YYYY format" ValidationExpression="^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/\d{4}$"></asp:RegularExpressionValidator>
         <br />
-        MOV_duration:
+        Duration:
         <asp:TextBox ID="MOV_durationTextBox" runat="server" Text='<%# Bind("MOV_duration") %>' />
         <br />
-        MOV_price:
+        Price:
         <asp:TextBox ID="MOV_priceTextBox" runat="server" Text='<%# Bind("MOV_price") %>' />
         <asp:RequiredFieldValidator ID="PriceNotNull" runat="server" ControlToValidate="MOV_priceTextBox" ErrorMessage="*Enter a Price"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="MOV_priceTextBox" ErrorMessage="*Enter a Valid Price: XX.XX" ValidationExpression="^\d+\.\d{2}$"></asp:RegularExpressionValidator>
         <br />
-        MOV_genre:
+        Genre:
         <asp:TextBox ID="MOV_genreTextBox" runat="server" Text='<%# Bind("MOV_genre") %>' />
         <br />
         <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
         &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
     </InsertItemTemplate>
     <ItemTemplate>
-        MOV_code:
+        Code:
         <asp:Label ID="MOV_codeLabel" runat="server" Text='<%# Eval("MOV_code") %>' />
         <br />
-        MOV_title:
+        Title:
         <asp:Label ID="MOV_titleLabel" runat="server" Text='<%# Bind("MOV_title") %>' />
         <br />
-        MOV_releasedate:
+        Release Date:
         <asp:Label ID="MOV_releasedateLabel" runat="server" Text='<%# Bind("MOV_releasedate") %>' />
         <br />
-        MOV_duration:
+        Duration:
         <asp:Label ID="MOV_durationLabel" runat="server" Text='<%# Bind("MOV_duration") %>' />
         <br />
-        MOV_price:
+        Price:
         <asp:Label ID="MOV_priceLabel" runat="server" Text='<%# Bind("MOV_price") %>' />
         <br />
-        MOV_genre:
+        Genre:
         <asp:Label ID="MOV_genreLabel" runat="server" Text='<%# Bind("MOV_genre") %>' />
         <br />
         <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />

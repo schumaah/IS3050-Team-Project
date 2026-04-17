@@ -2,5 +2,5 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
-This is the default page
+    Welcome to Rokey&#39;s Retro Video Rental website. 
 </asp:Content>

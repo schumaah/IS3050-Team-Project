@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Team_Project
+namespace Team_Project.Pages
 {
 
 
-    public partial class _default
+    public partial class Movies
     {
 
         /// <summary>

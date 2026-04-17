@@ -11,7 +11,7 @@ namespace Team_Project.Pages
 {
 
 
-    public partial class WebForm2
+    public partial class Customers
     {
 
         /// <summary>
