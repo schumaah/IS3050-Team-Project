@@ -1,38 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Team_Project.Pages
 {
-    public partial class Genres : System.Web.UI.Page
+    public partial class Genres : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void ValidateUniqueCode(object source, ServerValidateEventArgs args)
         {
-            string inputID = args.Value;
+            string inputCode = args.Value == null ? string.Empty : args.Value.Trim();
 
-            string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\movies.mdf;Integrated Security=True";
+            if (string.IsNullOrWhiteSpace(inputCode))
+            {
+                args.IsValid = false;
+                return;
+            }
+
+            string connString = ConfigurationManager.ConnectionStrings["Customers"].ConnectionString;
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
-                conn.Open();
-
-                string query = "SELECT COUNT(*) FROM genre WHERE GEN_code = @ID";
+                string query = "SELECT COUNT(*) FROM [genre] WHERE [GEN_code] = @GEN_code";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@ID", inputID);
+                    cmd.Parameters.AddWithValue("@GEN_code", inputCode);
 
-                    int count = (int)cmd.ExecuteScalar();
+                    conn.Open();
 
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
                     args.IsValid = (count == 0);
                 }
             }

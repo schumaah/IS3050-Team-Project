@@ -1,38 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Team_Project.Pages
 {
-    public partial class Customers : System.Web.UI.Page
+    public partial class Customers : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void ValidateUniqueSSN(object source, ServerValidateEventArgs args)
         {
-            string inputSSN = args.Value;
+            string inputSSN = args.Value == null ? string.Empty : args.Value.Trim();
 
-            string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\movies.mdf;Integrated Security=True";
+            if (string.IsNullOrWhiteSpace(inputSSN))
+            {
+                args.IsValid = false;
+                return;
+            }
+
+            string connString = ConfigurationManager.ConnectionStrings["Customers"].ConnectionString;
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
-                conn.Open();
-
-                string query = "SELECT COUNT(*) FROM customer WHERE CUST_ssn = @SSN";
+                string query = "SELECT COUNT(*) FROM [customer] WHERE [CUST_ssn] = @CUST_ssn";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@SSN", inputSSN);
+                    cmd.Parameters.AddWithValue("@CUST_ssn", inputSSN);
 
-                    int count = (int)cmd.ExecuteScalar();
+                    conn.Open();
 
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
                     args.IsValid = (count == 0);
                 }
             }
