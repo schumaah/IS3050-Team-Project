@@ -11,7 +11,7 @@ namespace Team_Project.Pages
 {
 
 
-    public partial class WebForm4
+    public partial class Genres
     {
 
         /// <summary>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site1.Master" AutoEventWireup="true" CodeBehind="Genres.aspx.cs" Inherits="Team_Project.Pages.WebForm4" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Site1.Master" AutoEventWireup="true" CodeBehind="Genres.aspx.cs" Inherits="Team_Project.Pages.Genres" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -12,8 +12,8 @@
             <br />
             Name:
                 <asp:TextBox ID="GEN_nameTextBox" runat="server" Text='<%# Bind("GEN_name") %>' />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*Enter a Name"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="GENNameRequiredEdit" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*Enter a Name"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="GENNameLengthEdit" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*Name must be 1-50 characters" ValidationExpression="^.{1,50}$"></asp:RegularExpressionValidator>
             <br />
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
@@ -21,14 +21,14 @@
         <InsertItemTemplate>
             Code:
                 <asp:TextBox ID="GEN_codeTextBox" runat="server" Text='<%# Bind("GEN_code") %>' />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="GEN_codeTextBox" Display="Dynamic" ErrorMessage="*"></asp:RequiredFieldValidator>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="GEN_codeTextBox" Display="Dynamic" ErrorMessage="Code must be 4 digits" ValidationExpression="^\d{4}$"></asp:RegularExpressionValidator>
-            <asp:RequiredFieldValidator ID="GenreCodeNotNull" runat="server" ControlToValidate="GEN_codeTextBox" ErrorMessage="*Enter a Genre Code"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="GENCodeRequiredInsert" runat="server" ControlToValidate="GEN_codeTextBox" ErrorMessage="*Enter a Genre Code"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="GENCodeLengthInsert" runat="server" ControlToValidate="GEN_codeTextBox" ErrorMessage="*Code must be exactly 4 characters" ValidationExpression="^.{4}$"></asp:RegularExpressionValidator>
+            <asp:CustomValidator ID="CustomValidator1" runat="server" ClientValidationFunction="ValidateUniqueCode" ControlToValidate="GEN_codeTextBox" ErrorMessage="*Code must be Unique"></asp:CustomValidator>
             <br />
             Name:
                 <asp:TextBox ID="GEN_nameTextBox" runat="server" Text='<%# Bind("GEN_name") %>' />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*"></asp:RequiredFieldValidator>
-            <asp:RequiredFieldValidator ID="GenreNameNotNull" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="Enter a name"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="GENNameRequiredInsert" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*Enter a Name"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="GENNameLengthInsert" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*Name must be 1-50 characters" ValidationExpression="^.{1,50}$"></asp:RegularExpressionValidator>
             <br />
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
             &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
