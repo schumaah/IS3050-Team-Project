@@ -39,5 +39,33 @@ namespace Team_Project.Pages
                 }
             }
         }
+
+        protected void SqlDataSource1_Deleting(object sender, SqlDataSourceCommandEventArgs e)
+        {
+            lblDeleteMessage.Text = "";
+
+            string genreCode = e.Command.Parameters["@GEN_code"].Value.ToString();
+            string connString = ConfigurationManager.ConnectionStrings["Customers"].ConnectionString;
+
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                string query = "SELECT COUNT(*) FROM [movie] WHERE [MOV_genre] = @GEN_code";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@GEN_code", genreCode);
+
+                    conn.Open();
+
+                    int movieCount = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (movieCount > 0)
+                    {
+                        e.Cancel = true;
+                        lblDeleteMessage.Text = "Cannot delete this genre because it is associated with one or more movies.";
+                    }
+                }
+            }
+        }
     }
 }

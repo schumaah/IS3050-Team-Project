@@ -6,6 +6,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="main" runat="server">
     <h1>Customers</h1>
 
+    <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
+    <br />
+
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
 
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="CUST_ssn" DataSourceID="SqlDataSource1" AllowPaging="True">
@@ -157,7 +160,8 @@
         SelectCommand="SELECT * FROM [customer]"
         InsertCommand="INSERT INTO [customer] ([CUST_ssn], [CUST_name], [CUST_dob], [CUST_memberdate]) VALUES (@CUST_ssn, @CUST_name, @CUST_dob, @CUST_memberdate)"
         UpdateCommand="UPDATE [customer] SET [CUST_name]=@CUST_name, [CUST_dob]=@CUST_dob, [CUST_memberdate]=@CUST_memberdate WHERE [CUST_ssn]=@CUST_ssn"
-        DeleteCommand="DELETE FROM [customer] WHERE [CUST_ssn]=@CUST_ssn">
+        DeleteCommand="DELETE FROM [customer] WHERE [CUST_ssn]=@CUST_ssn"
+        OnDeleted="SqlDataSource1_Deleted">
 
         <InsertParameters>
             <asp:Parameter Name="CUST_ssn" Type="String" />

@@ -8,6 +8,10 @@
 
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
 
+    <!-- NEW: Error message -->
+    <asp:Label ID="lblDeleteMessage" runat="server" ForeColor="Red"></asp:Label>
+    <br />
+
     <asp:FormView ID="FormView1" runat="server" DataKeyNames="GEN_code" DataSourceID="SqlDataSource1" AllowPaging="True">
         <EditItemTemplate>
             Code:
@@ -16,19 +20,8 @@
 
             Name:
             <asp:TextBox ID="GEN_nameTextBox" runat="server" Text='<%# Bind("GEN_name") %>' />
-            <asp:RequiredFieldValidator
-                ID="GENNameRequiredEdit"
-                runat="server"
-                ControlToValidate="GEN_nameTextBox"
-                ErrorMessage="*Enter a Name"
-                Display="Dynamic" />
-            <asp:RegularExpressionValidator
-                ID="GENNameLengthEdit"
-                runat="server"
-                ControlToValidate="GEN_nameTextBox"
-                ErrorMessage="*Name must be 1-50 characters"
-                ValidationExpression="^.{1,50}$"
-                Display="Dynamic" />
+            <asp:RequiredFieldValidator ID="GENNameRequiredEdit" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*Enter a Name" Display="Dynamic" />
+            <asp:RegularExpressionValidator ID="GENNameLengthEdit" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*Name must be 1-50 characters" ValidationExpression="^.{1,50}$" Display="Dynamic" />
             <br />
 
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
@@ -39,43 +32,15 @@
         <InsertItemTemplate>
             Code:
             <asp:TextBox ID="GEN_codeTextBox" runat="server" Text='<%# Bind("GEN_code") %>' />
-            <asp:RequiredFieldValidator
-                ID="GENCodeRequiredInsert"
-                runat="server"
-                ControlToValidate="GEN_codeTextBox"
-                ErrorMessage="*Enter a Genre Code"
-                Display="Dynamic" />
-            <asp:RegularExpressionValidator
-                ID="GENCodeLengthInsert"
-                runat="server"
-                ControlToValidate="GEN_codeTextBox"
-                ErrorMessage="*Code must be exactly 4 characters"
-                ValidationExpression="^.{4}$"
-                Display="Dynamic" />
-            <asp:CustomValidator
-                ID="GENCodeUniqueInsert"
-                runat="server"
-                ControlToValidate="GEN_codeTextBox"
-                OnServerValidate="ValidateUniqueCode"
-                ErrorMessage="*Genre code must be unique"
-                Display="Dynamic" />
+            <asp:RequiredFieldValidator ID="GENCodeRequiredInsert" runat="server" ControlToValidate="GEN_codeTextBox" ErrorMessage="*Enter a Genre Code" Display="Dynamic" />
+            <asp:RegularExpressionValidator ID="GENCodeLengthInsert" runat="server" ControlToValidate="GEN_codeTextBox" ErrorMessage="*Code must be exactly 4 characters" ValidationExpression="^.{4}$" Display="Dynamic" />
+            <asp:CustomValidator ID="GENCodeUniqueInsert" runat="server" ControlToValidate="GEN_codeTextBox" OnServerValidate="ValidateUniqueCode" ErrorMessage="*Genre code must be unique" Display="Dynamic" />
             <br />
 
             Name:
             <asp:TextBox ID="GEN_nameTextBox" runat="server" Text='<%# Bind("GEN_name") %>' />
-            <asp:RequiredFieldValidator
-                ID="GENNameRequiredInsert"
-                runat="server"
-                ControlToValidate="GEN_nameTextBox"
-                ErrorMessage="*Enter a Name"
-                Display="Dynamic" />
-            <asp:RegularExpressionValidator
-                ID="GENNameLengthInsert"
-                runat="server"
-                ControlToValidate="GEN_nameTextBox"
-                ErrorMessage="*Name must be 1-50 characters"
-                ValidationExpression="^.{1,50}$"
-                Display="Dynamic" />
+            <asp:RequiredFieldValidator ID="GENNameRequiredInsert" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*Enter a Name" Display="Dynamic" />
+            <asp:RegularExpressionValidator ID="GENNameLengthInsert" runat="server" ControlToValidate="GEN_nameTextBox" ErrorMessage="*Name must be 1-50 characters" ValidationExpression="^.{1,50}$" Display="Dynamic" />
             <br />
 
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
@@ -108,7 +73,8 @@
         SelectCommand="SELECT * FROM [genre]"
         InsertCommand="INSERT INTO [genre] ([GEN_code], [GEN_name]) VALUES (@GEN_code, @GEN_name)"
         UpdateCommand="UPDATE [genre] SET [GEN_name] = @GEN_name WHERE [GEN_code] = @GEN_code"
-        DeleteCommand="DELETE FROM [genre] WHERE [GEN_code] = @GEN_code">
+        DeleteCommand="DELETE FROM [genre] WHERE [GEN_code] = @GEN_code"
+        OnDeleting="SqlDataSource1_Deleting">
 
         <DeleteParameters>
             <asp:Parameter Name="GEN_code" Type="String" />

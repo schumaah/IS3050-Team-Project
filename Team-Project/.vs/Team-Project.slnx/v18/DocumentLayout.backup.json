@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\team-project\\pages\\customers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\customers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|c:\\users\\danny\\onedrive\\documents\\github\\is3050-team-project\\team-project\\team-project\\pages\\customers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\customers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\team-project\\pages\\movies.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\movies.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\team-project\\pages\\genres.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\genres.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\team-project\\pages\\genres.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\genres.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\team-project\\pages\\genres.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\genres.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\team-project\\pages\\genres.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\genres.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\team-project\\pages\\movies.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\movies.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\team-project\\pages\\genres.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\genres.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\team-project\\pages\\movies.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\movies.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\team-project\\pages\\customers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\customers.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|c:\\users\\danny\\onedrive\\documents\\github\\is3050-team-project\\team-project\\team-project\\pages\\customers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{617217F8-B8F7-4FD0-8CAE-217600DF65DE}|Team-Project\\Team-Project.csproj|solutionrelative:team-project\\pages\\customers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Genres.aspx",
               "DocumentMoniker": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Genres.aspx",
               "RelativeDocumentMoniker": "Team-Project\\Pages\\Genres.aspx",
@@ -59,20 +59,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Movies.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Movies.aspx.cs",
               "RelativeDocumentMoniker": "Team-Project\\Pages\\Movies.aspx.cs",
               "ToolTip": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Movies.aspx.cs",
               "RelativeToolTip": "Team-Project\\Pages\\Movies.aspx.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAkwEMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-17T19:10:29.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "Movies.aspx",
+              "DocumentMoniker": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Movies.aspx",
+              "RelativeDocumentMoniker": "Team-Project\\Pages\\Movies.aspx",
+              "ToolTip": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Movies.aspx",
+              "RelativeToolTip": "Team-Project\\Pages\\Movies.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2026-04-17T18:33:27.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Customers.aspx",
               "DocumentMoniker": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Customers.aspx",
               "RelativeDocumentMoniker": "Team-Project\\Pages\\Customers.aspx",
@@ -85,54 +98,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Customers.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Customers.aspx.cs",
               "RelativeDocumentMoniker": "Team-Project\\Pages\\Customers.aspx.cs",
               "ToolTip": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Customers.aspx.cs",
               "RelativeToolTip": "Team-Project\\Pages\\Customers.aspx.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAADwvyoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwDwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-17T18:31:24.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Genres.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Genres.aspx.cs",
               "RelativeDocumentMoniker": "Team-Project\\Pages\\Genres.aspx.cs",
               "ToolTip": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Genres.aspx.cs",
               "RelativeToolTip": "Team-Project\\Pages\\Genres.aspx.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAUwCoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwEYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-17T19:13:15.984Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Genres.aspx.designer.cs",
               "DocumentMoniker": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Genres.aspx.designer.cs",
               "RelativeDocumentMoniker": "Team-Project\\Pages\\Genres.aspx.designer.cs",
               "ToolTip": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Genres.aspx.designer.cs",
               "RelativeToolTip": "Team-Project\\Pages\\Genres.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-17T19:13:15.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Movies.aspx",
-              "DocumentMoniker": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Movies.aspx",
-              "RelativeDocumentMoniker": "Team-Project\\Pages\\Movies.aspx",
-              "ToolTip": "C:\\Users\\Danny\\OneDrive\\Documents\\GitHub\\IS3050-Team-Project\\Team-Project\\Team-Project\\Pages\\Movies.aspx",
-              "RelativeToolTip": "Team-Project\\Pages\\Movies.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-04-17T18:33:27.966Z",
               "EditorCaption": ""
             }
           ]

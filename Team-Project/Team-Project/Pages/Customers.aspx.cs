@@ -10,6 +10,10 @@ namespace Team_Project.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                lblMessage.Text = string.Empty;
+            }
         }
 
         protected void ValidateUniqueSSN(object source, ServerValidateEventArgs args)
@@ -31,12 +35,26 @@ namespace Team_Project.Pages
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@CUST_ssn", inputSSN);
-
                     conn.Open();
-
                     int count = Convert.ToInt32(cmd.ExecuteScalar());
                     args.IsValid = (count == 0);
                 }
+            }
+        }
+
+        protected void SqlDataSource1_Deleted(object sender, SqlDataSourceStatusEventArgs e)
+        {
+            if (e.Exception != null)
+            {
+                if (e.Exception.Message.Contains("FK_rental_customer"))
+                {
+                    lblMessage.Text = "Cannot delete this customer because they have rental records.";
+                    e.ExceptionHandled = true;
+                }
+            }
+            else
+            {
+                lblMessage.Text = string.Empty;
             }
         }
     }
